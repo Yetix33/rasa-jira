@@ -1,0 +1,93 @@
+intents:
+- greet
+- goodbye
+- affirm
+- deny
+- mood_great
+- mood_unhappy
+- silly
+- add
+- move
+- none
+entities:
+- header
+- body
+- person
+- size
+- time
+- state
+slots:
+  body:
+    type: unfeaturized
+    auto_fill: false
+  header:
+    type: unfeaturized
+    auto_fill: false
+  person:
+    type: unfeaturized
+    auto_fill: false
+  size:
+    type: unfeaturized
+    auto_fill: false
+  state:
+    type: categorical
+    auto_fill: false
+    values:
+    - todo
+    - doing
+    - done
+  time:
+    type: unfeaturized
+    auto_fill: false
+templates:
+  utter_greet:
+  - text: Hey! How are you?
+  utter_cheer_up:
+  - text: 'Here is something to cheer you up:'
+    image: https://i.imgur.com/nGF1K8f.jpg
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_silly:
+  - text: landerchibi
+  utter_ask_header:
+  - text: What should the task header be fam?
+  utter_ask_body:
+  - text: Tell me some task details?
+  utter_ask_person:
+  - text: Who's mans are working on this task?
+  utter_ask_size:
+  - text: How big is this task?
+  utter_ask_time:
+  - text: When should this task be done by?
+  utter_ask_state:
+  - text: Which state should this task start in?
+  utter_formDone:
+  - text: "task: {header}\n details: {body}\n person: {person}\n size: {size}\n time:\
+      \ {time}\n state: {state}\n "
+  utter_moved:
+  - text: moved the card fam
+actions:
+- utter_greet
+- utter_cheer_up
+- utter_did_that_help
+- utter_happy
+- utter_goodbye
+- utter_silly
+- my_action
+- move_action
+- resetSlot_action
+- utter_ask_header
+- utter_ask_body
+- utter_ask_person
+- utter_ask_size
+- utter_ask_state
+- utter_ask_time
+- utter_formDone
+- utter_moved
+forms:
+- task_form
+- move_form
