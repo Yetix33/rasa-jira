@@ -1,4 +1,4 @@
-# rasa-project
+# rasa-jira
 ## Technologies
 - Python
 - Rasa
